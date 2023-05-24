@@ -82,6 +82,7 @@ struct AdditionView: View {
             // 3. Check answer
             //    Only show button when answer has not already been checked
             if answerChecked == false {
+                
                 Button(action: {
                     checkAnswer()
                 }, label: {
@@ -90,6 +91,20 @@ struct AdditionView: View {
                 })
                 .padding()
                 .buttonStyle(.bordered)
+                
+            } else {
+                
+                // 4. Generate new question
+                // Only show this once an answer has been provided
+                Button(action: {
+                    generateNewQuestion()
+                }, label: {
+                    Text("New question")
+                        .font(.largeTitle)
+                })
+                .padding()
+                .buttonStyle(.bordered)
+                
             }
             
             // Push interface up to top of screen
@@ -100,6 +115,8 @@ struct AdditionView: View {
     }
     
     // MARK: Functions
+    
+    // Check whether a given answer was correct or not
     func checkAnswer() {
         
         // Can the user's input be converted to an integer?
@@ -126,6 +143,22 @@ struct AdditionView: View {
         
         // Record that the user's answer has been checked
         answerChecked = true
+
+    }
+    
+    // Generate a new question
+    func generateNewQuestion() {
+        
+        // Generate a new question
+        augend = Int.random(in: 1...72)
+        addend = Int.random(in: 1...72)
+
+        // Reset properties that track what's happening with the current question
+        answerChecked = false
+        answerCorrect = false
+        
+        // Reset the input field
+        input = ""
 
     }
 }
