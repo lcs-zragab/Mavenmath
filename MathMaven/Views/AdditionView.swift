@@ -25,6 +25,13 @@ struct AdditionView: View {
     @State var answerCorrect = false
     
     // MARK: Computed properties
+
+    // The correct response
+    var correctResponse: Int {
+        return augend + addend
+    }
+    
+    // The user interface to show
     var body: some View {
         
         VStack(spacing: 0) {
@@ -72,10 +79,54 @@ struct AdditionView: View {
             }
             .padding(.horizontal)
 
+            // 3. Check answer
+            //    Only show button when answer has not already been checked
+            if answerChecked == false {
+                Button(action: {
+                    checkAnswer()
+                }, label: {
+                    Text("Check Answer")
+                        .font(.largeTitle)
+                })
+                .padding()
+                .buttonStyle(.bordered)
+            }
+            
             // Push interface up to top of screen
             Spacer()
+
         }
         .font(Font.custom("SF Pro", size: 64))
+    }
+    
+    // MARK: Functions
+    func checkAnswer() {
+        
+        // Can the user's input be converted to an integer?
+        guard let providedAnswer = Int(input) else {
+            
+            // Input could not be
+            answerCorrect = false
+            
+            // Record that the user's answer has been checked
+            answerChecked = true
+
+            // End the function, nothing more to do
+            return
+        }
+        
+        // Check the provided answer
+        if providedAnswer == correctResponse {
+            // Celebrate! User's provided answer was correct👍🏼
+            answerCorrect = true
+        } else {
+            // An integer was provided, but it's not correct 😭
+            answerCorrect = false
+        }
+        
+        // Record that the user's answer has been checked
+        answerChecked = true
+
     }
 }
 
