@@ -12,8 +12,8 @@ struct AdditionView: View {
     // MARK: Stored properties
     
     // The numbers to be added
-    @State var augend = Int.random(in: 1...72)
-    @State var addend = Int.random(in: 1...72)
+    @State var firstValue = Int.random(in: 1...72)
+    @State var secondValue = Int.random(in: 1...72)
     
     // Holds whatever input was provided by the user
     @State var input = ""
@@ -28,7 +28,7 @@ struct AdditionView: View {
 
     // The correct response
     var correctResponse: Int {
-        return augend + addend
+        return firstValue + secondValue
     }
     
     // The user interface to show
@@ -44,8 +44,8 @@ struct AdditionView: View {
                     Spacer()
                     
                     VStack(alignment: .trailing) {
-                        Text("\(augend)")
-                        Text("\(addend)")
+                        Text("\(firstValue)")
+                        Text("\(secondValue)")
                     }
                 }
                 
@@ -150,8 +150,8 @@ struct AdditionView: View {
     func generateNewQuestion() {
         
         // Generate a new question
-        augend = Int.random(in: 1...72)
-        addend = Int.random(in: 1...72)
+        firstValue = Int.random(in: 1...72)
+        secondValue = Int.random(in: 1...72)
 
         // Reset properties that track what's happening with the current question
         answerChecked = false
