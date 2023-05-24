@@ -82,14 +82,10 @@ struct SubtractionView: View {
             //    Only show button when answer has not already been checked
             if answerChecked == false {
                 
-                Button(action: {
-                    checkAnswer()
-                }, label: {
-                    Text("Check Answer")
-                        .font(.largeTitle)
-                })
-                .padding()
-                .buttonStyle(.bordered)
+                CheckAnswerButtonView(input: input,
+                                      correctResponse: correctResponse,
+                                      answerChecked: $answerChecked,
+                                      answerCorrect: $answerCorrect)
                 
             } else {
                 
@@ -116,36 +112,6 @@ struct SubtractionView: View {
             // Changes second value from 0 to something less than first value
             secondValue = Int.random(in: 1...firstValue)
         }
-    }
-    
-    // Check whether a given answer was correct or not
-    func checkAnswer() {
-        
-        // Can the user's input be converted to an integer?
-        guard let providedAnswer = Int(input) else {
-            
-            // Input could not be
-            answerCorrect = false
-            
-            // Record that the user's answer has been checked
-            answerChecked = true
-
-            // End the function, nothing more to do
-            return
-        }
-        
-        // Check the provided answer
-        if providedAnswer == correctResponse {
-            // Celebrate! User's provided answer was correct👍🏼
-            answerCorrect = true
-        } else {
-            // An integer was provided, but it's not correct 😭
-            answerCorrect = false
-        }
-        
-        // Record that the user's answer has been checked
-        answerChecked = true
-
     }
     
     // Generate a new question
