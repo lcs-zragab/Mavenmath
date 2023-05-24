@@ -9,7 +9,11 @@ import SwiftUI
 
 struct DivisionView: View {
     var body: some View {
-        Text("Division")
+        VStack {
+            Text("Division")
+            Text(Operation.division.rawValue)
+        }
+        .font(Font.custom("SF Pro", size: 64))
     }
 }
 

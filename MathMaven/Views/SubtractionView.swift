@@ -9,7 +9,11 @@ import SwiftUI
 
 struct SubtractionView: View {
     var body: some View {
-        Text("Subtraction")
+        VStack {
+            Text("Subtraction")
+            Text(Operation.subtraction.rawValue)
+        }
+        .font(Font.custom("SF Pro", size: 64))
     }
 }
 

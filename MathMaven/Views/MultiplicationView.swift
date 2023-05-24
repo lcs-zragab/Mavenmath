@@ -9,7 +9,11 @@ import SwiftUI
 
 struct MultiplicationView: View {
     var body: some View {
-        Text("Multiplication")
+        VStack {
+            Text("Multiplication")
+            Text(Operation.multiplication.rawValue)
+        }
+        .font(Font.custom("SF Pro", size: 64))
     }
 }
 

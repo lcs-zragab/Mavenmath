@@ -9,7 +9,11 @@ import SwiftUI
 
 struct AdditionView: View {
     var body: some View {
-        Text("Addition")
+        VStack {
+            Text("Addition")
+            Text(Operation.addition.rawValue)
+        }
+        .font(Font.custom("SF Pro", size: 64))
     }
 }
 

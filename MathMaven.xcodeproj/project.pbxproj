@@ -14,6 +14,7 @@
 		8148590A2A1E294A00A7315E /* SubtractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859092A1E294A00A7315E /* SubtractionView.swift */; };
 		8148590D2A1E296E00A7315E /* MultiplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148590C2A1E296E00A7315E /* MultiplicationView.swift */; };
 		8148590F2A1E298300A7315E /* DivisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148590E2A1E298300A7315E /* DivisionView.swift */; };
+		814859122A1E2A5900A7315E /* Operation.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859112A1E2A5900A7315E /* Operation.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -25,6 +26,7 @@
 		814859092A1E294A00A7315E /* SubtractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionView.swift; sourceTree = "<group>"; };
 		8148590C2A1E296E00A7315E /* MultiplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationView.swift; sourceTree = "<group>"; };
 		8148590E2A1E298300A7315E /* DivisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionView.swift; sourceTree = "<group>"; };
+		814859112A1E2A5900A7315E /* Operation.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Operation.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -58,6 +60,7 @@
 			isa = PBXGroup;
 			children = (
 				814858F82A1E28DE00A7315E /* MathMavenApp.swift */,
+				814859102A1E2A4500A7315E /* Model */,
 				814859062A1E292A00A7315E /* Views */,
 				814858FC2A1E28DF00A7315E /* Assets.xcassets */,
 				814858FE2A1E28DF00A7315E /* Preview Content */,
@@ -82,6 +85,14 @@
 				8148590E2A1E298300A7315E /* DivisionView.swift */,
 			);
 			path = Views;
+			sourceTree = "<group>";
+		};
+		814859102A1E2A4500A7315E /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				814859112A1E2A5900A7315E /* Operation.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -159,6 +170,7 @@
 				814858F92A1E28DE00A7315E /* MathMavenApp.swift in Sources */,
 				8148590A2A1E294A00A7315E /* SubtractionView.swift in Sources */,
 				8148590F2A1E298300A7315E /* DivisionView.swift in Sources */,
+				814859122A1E2A5900A7315E /* Operation.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
