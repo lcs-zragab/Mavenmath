@@ -11,7 +11,32 @@ import SwiftUI
 struct MathMavenApp: App {
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            TabView {
+                AdditionView()
+                    .tabItem {
+                        Image(systemName: "plus.circle")
+                        Text("Add")
+                    }
+
+                SubtractionView()
+                    .tabItem {
+                        Image(systemName: "minus.circle")
+                        Text("Subtract")
+                    }
+
+                MultiplicationView()
+                    .tabItem {
+                        Image(systemName: "multiply.circle")
+                        Text("Mutiply")
+                    }
+
+                DivisionView()
+                    .tabItem {
+                        Image(systemName: "divide.circle")
+                        Text("Divide")
+                    }
+
+            }
         }
     }
 }

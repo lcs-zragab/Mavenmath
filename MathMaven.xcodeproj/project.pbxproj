@@ -8,17 +8,23 @@
 
 /* Begin PBXBuildFile section */
 		814858F92A1E28DE00A7315E /* MathMavenApp.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814858F82A1E28DE00A7315E /* MathMavenApp.swift */; };
-		814858FB2A1E28DE00A7315E /* ContentView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814858FA2A1E28DE00A7315E /* ContentView.swift */; };
 		814858FD2A1E28DF00A7315E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814858FC2A1E28DF00A7315E /* Assets.xcassets */; };
 		814859002A1E28DF00A7315E /* Preview Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 814858FF2A1E28DF00A7315E /* Preview Assets.xcassets */; };
+		814859082A1E293C00A7315E /* AdditionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859072A1E293C00A7315E /* AdditionView.swift */; };
+		8148590A2A1E294A00A7315E /* SubtractionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 814859092A1E294A00A7315E /* SubtractionView.swift */; };
+		8148590D2A1E296E00A7315E /* MultiplicationView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148590C2A1E296E00A7315E /* MultiplicationView.swift */; };
+		8148590F2A1E298300A7315E /* DivisionView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8148590E2A1E298300A7315E /* DivisionView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
 		814858F52A1E28DE00A7315E /* MathMaven.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = MathMaven.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		814858F82A1E28DE00A7315E /* MathMavenApp.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MathMavenApp.swift; sourceTree = "<group>"; };
-		814858FA2A1E28DE00A7315E /* ContentView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentView.swift; sourceTree = "<group>"; };
 		814858FC2A1E28DF00A7315E /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		814858FF2A1E28DF00A7315E /* Preview Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = "Preview Assets.xcassets"; sourceTree = "<group>"; };
+		814859072A1E293C00A7315E /* AdditionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdditionView.swift; sourceTree = "<group>"; };
+		814859092A1E294A00A7315E /* SubtractionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubtractionView.swift; sourceTree = "<group>"; };
+		8148590C2A1E296E00A7315E /* MultiplicationView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MultiplicationView.swift; sourceTree = "<group>"; };
+		8148590E2A1E298300A7315E /* DivisionView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DivisionView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -52,7 +58,7 @@
 			isa = PBXGroup;
 			children = (
 				814858F82A1E28DE00A7315E /* MathMavenApp.swift */,
-				814858FA2A1E28DE00A7315E /* ContentView.swift */,
+				814859062A1E292A00A7315E /* Views */,
 				814858FC2A1E28DF00A7315E /* Assets.xcassets */,
 				814858FE2A1E28DF00A7315E /* Preview Content */,
 			);
@@ -65,6 +71,17 @@
 				814858FF2A1E28DF00A7315E /* Preview Assets.xcassets */,
 			);
 			path = "Preview Content";
+			sourceTree = "<group>";
+		};
+		814859062A1E292A00A7315E /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				814859072A1E293C00A7315E /* AdditionView.swift */,
+				814859092A1E294A00A7315E /* SubtractionView.swift */,
+				8148590C2A1E296E00A7315E /* MultiplicationView.swift */,
+				8148590E2A1E298300A7315E /* DivisionView.swift */,
+			);
+			path = Views;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,8 +154,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				814858FB2A1E28DE00A7315E /* ContentView.swift in Sources */,
+				8148590D2A1E296E00A7315E /* MultiplicationView.swift in Sources */,
+				814859082A1E293C00A7315E /* AdditionView.swift in Sources */,
 				814858F92A1E28DE00A7315E /* MathMavenApp.swift in Sources */,
+				8148590A2A1E294A00A7315E /* SubtractionView.swift in Sources */,
+				8148590F2A1E298300A7315E /* DivisionView.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
