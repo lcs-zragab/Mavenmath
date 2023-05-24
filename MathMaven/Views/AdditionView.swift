@@ -8,10 +8,33 @@
 import SwiftUI
 
 struct AdditionView: View {
+    
+    // MARK: Stored properties
+    @State var augend = Int.random(in: 1...72)
+    @State var addend = Int.random(in: 1...72)
+    
+    // MARK: Computed properties
     var body: some View {
-        VStack {
-            Text("Addition")
-            Text(Operation.addition.rawValue)
+        
+        VStack(spacing: 0) {
+            
+            // 1. Present question
+            Group {
+                HStack {
+                    Text(Operation.addition.rawValue)
+                    
+                    Spacer()
+                    
+                    VStack(alignment: .trailing) {
+                        Text("\(augend)")
+                        Text("\(addend)")
+                    }
+                }
+                
+                Divider()
+            }
+            .padding(.horizontal)
+            
         }
         .font(Font.custom("SF Pro", size: 64))
     }
