@@ -131,9 +131,5 @@ struct MultiplicationView: View {
     }
 }
 
-struct SubtractionView_Previews: PreviewProvider {
-    static var previews: some View {
-        SubtractionView()
-    }
-}
+
 
