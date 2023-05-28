@@ -38,7 +38,7 @@ struct MultiplicationView: View {
             // 1. Present question
             Group {
                 HStack {
-                    Text(Operation.subtraction.rawValue)
+                    Text(Operation.multiplication.rawValue)
                     
                     Spacer()
                     

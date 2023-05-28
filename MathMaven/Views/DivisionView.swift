@@ -38,7 +38,7 @@ struct DivisionView: View {
             // 1. Present question
             Group {
                 HStack {
-                    Text(Operation.subtraction.rawValue)
+                    Text(Operation.division.rawValue)
                     
                     Spacer()
                     
